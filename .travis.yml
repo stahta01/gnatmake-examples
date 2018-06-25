@@ -1,6 +1,11 @@
 sudo: false
 
-language: ada
+language: c
+
+addons:
+  apt:
+    packages:
+      - gnat
 
 jobs:
   include:
