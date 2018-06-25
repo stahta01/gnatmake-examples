@@ -1,7 +1,7 @@
 language: c
 
 before_install:
-  - sudo apt-get install -y gnat
+  - sudo apt-get install gnat
 
 jobs:
   include:
