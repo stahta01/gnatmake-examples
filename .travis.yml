@@ -7,3 +7,5 @@ jobs:
   include:
     - stage: starter
       script: cd $TRAVIS_BUILD_DIR/gnu-make-hello && make
+    - stage: starter
+      script: cd $TRAVIS_BUILD_DIR/gnatmake-hello && gnatmake
