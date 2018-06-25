@@ -5,7 +5,7 @@ before_install:
 
 jobs:
   include:
-    - stage: starter
+    - stage: gnu-make
       script: cd $TRAVIS_BUILD_DIR/gnu-make-hello && make
-    - stage: starter
-      script: cd $TRAVIS_BUILD_DIR/gnatmake-hello && gnatmake
+    - stage: gnatmake
+      script: cd $TRAVIS_BUILD_DIR/gnatmake-hello && gnatmake hello.adb
