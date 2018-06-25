@@ -9,3 +9,5 @@ jobs:
       script: cd $TRAVIS_BUILD_DIR/gnu-make-hello && make && ./hello
     - stage: gnatmake
       script: cd $TRAVIS_BUILD_DIR/gnatmake-hello && gnatmake hello.adb && ./hello
+    - stage: ada-main-c-depend
+      script: cd $TRAVIS_BUILD_DIR/ada-main-c-depend && make && gnatmake main.adb -largs i_am_c.o && ./main
