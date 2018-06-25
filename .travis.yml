@@ -1,4 +1,4 @@
-language: c
+ language: c
 
 before_install:
   - sudo apt-get install gnat
@@ -6,6 +6,6 @@ before_install:
 jobs:
   include:
     - stage: gnu-make
-      script: cd $TRAVIS_BUILD_DIR/gnu-make-hello && make
+      script: cd $TRAVIS_BUILD_DIR/gnu-make-hello && make && ./hello
     - stage: gnatmake
-      script: cd $TRAVIS_BUILD_DIR/gnatmake-hello && gnatmake hello.adb
+      script: cd $TRAVIS_BUILD_DIR/gnatmake-hello && gnatmake hello.adb && ./hello
