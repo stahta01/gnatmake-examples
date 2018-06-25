@@ -1,5 +1,5 @@
 all:
-	gcc -c hello.adb
+	gcc-4.6 -c hello.adb
 	gnatbind hello
 	gnatlink hello
 
