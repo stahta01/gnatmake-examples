@@ -8,5 +8,5 @@ Study the top level [.travis.yml] file to understand how each of the subdirector
 
 [ci-badge]: https://travis-ci.org/dksmiffs/gnatmake.svg "Travis CI build status"
 [ci-travis]: https://travis-ci.org/dksmiffs/gnatmake
-[.travis.yml]: ./blob/master/.travis.yml
+[.travis.yml]: ./.travis.yml
 [Travis CI]: https://travis-ci.org
