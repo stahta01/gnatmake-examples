@@ -12,6 +12,6 @@ jobs:
     - stage: ada-main-c-depend
       script: cd $TRAVIS_BUILD_DIR/ada-main-c-depend && make && gnatmake main.adb -largs i_am_c.o && ./main
     - stage: c-main-ada-depend
-      script: cd $TRAVIS_BUILD_DIR/c-main-ada-depend && make && gnatmake -c i_am_ada.adb && gnatbind -n i_am_ada.ali && gnatlink i_am_ada.ali main.o -o main && ./main
+      script: cd $TRAVIS_BUILD_DIR/c-main-ada-depend && make && ./main
     - stage: ada-main-cpp-depend
       script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-depend && make && ./main
