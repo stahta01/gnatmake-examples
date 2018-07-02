@@ -4,9 +4,9 @@ Minimalist examples for using the GNU gnatmake Ada builder.  Each subdirectory i
 
 ## Usage
 
-Study the top level [.travis.yml] file to understand how each of the subdirectories is built on a Linux system on [Travis CI].
+1. Install [gnat].
+2. Run `make` in each subdirectory to generate an illustrative executable.
 
 [ci-badge]: https://travis-ci.org/dksmiffs/gnatmake-examples.svg "Travis CI build status"
 [ci-travis]: https://travis-ci.org/dksmiffs/gnatmake-examples
-[.travis.yml]: ./.travis.yml
-[Travis CI]: https://travis-ci.org
+[gnat]: https://www.gnu.org/software/gnat/
