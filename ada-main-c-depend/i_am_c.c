@@ -2,5 +2,5 @@
 
 void i_am_c()
 {
-  printf("Hello, I am C code.\n");
+  printf("  Hello, I am C code.\n");
 }
