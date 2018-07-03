@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <iostream>
 
 extern "C" void adainit();
@@ -11,4 +12,5 @@ int main()
   ada_proc();
   adafinal();
   std::cout << "Ending C++ main." << std::endl;
+  return EXIT_SUCCESS;
 }
