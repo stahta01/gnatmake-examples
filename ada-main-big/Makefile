@@ -53,6 +53,6 @@ $(OBJ_DIR)/$(C_SUB)/%.o: $(SRC_DIR)/$(C_SUB)/%.c
 	$(MKDIR) $(OBJ_DIR)/$(C_SUB)
 	gcc -c -o $@ $<
 
-$(OBJ_DIR)$(CPP_SUB)/%.o: $(SRC_DIR)/$(CPP_SUB)/%.cpp
+$(OBJ_DIR)/$(CPP_SUB)/%.o: $(SRC_DIR)/$(CPP_SUB)/%.cpp
 	$(MKDIR) $(OBJ_DIR)/$(CPP_SUB)
 	g++ -c -o $@ $<
