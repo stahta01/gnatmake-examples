@@ -17,3 +17,5 @@ jobs:
       script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-depend && make && ./main
     - stage: cpp-main-ada-depend
       script: cd $TRAVIS_BUILD_DIR/cpp-main-ada-depend && make && ./main
+    - stage: ada-main-big
+      script: cd $TRAVIS_BUILD_DIR/ada-main-big && make && ./bin/main
