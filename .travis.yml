@@ -6,7 +6,7 @@ before_install:
 jobs:
   include:
     - stage: dummy
-      script: g++ --print-libgcc-file-name
+      script: g++ --print-libgcc-file-name && ls -la /usr/lib/gcc/x86_64-linux-gnu/4.8/adalib/libgnat.a
 
 #    - stage: gnu-make
 #      script: cd $TRAVIS_BUILD_DIR/gnu-make-hello && make && ./hello
