@@ -21,7 +21,7 @@ CPP_SUB       := cpp
 CPP_SRC_FILES := $(wildcard $(SRC_DIR)/$(CPP_SUB)/*.cpp)
 CPP_OBJ_FILES := $(patsubst $(SRC_DIR)/$(CPP_SUB)/%.cpp, \
                             $(OBJ_DIR)/$(CPP_SUB)/%.o, \
-                            $(C_SRC_FILES))
+                            $(CPP_SRC_FILES))
 
 # Excellent SO answer guided this portion:
 #    stackoverflow.com/a/40873379
