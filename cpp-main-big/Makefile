@@ -43,7 +43,7 @@ all: $(ADA_SUBS) $(C_OBJ_FILES) $(CPP_OBJ_FILES)
 		g++ -o ../$(BIN_DIR)/$(MAIN) \
 		$(MAIN).o $(ADA_WRAP).a \
 		$(C_SUB)/*.o $(CPP_SUB)/*.o \
-		-L$(LIBGNAT) -lgnat
+		-L$(LIBGNAT) -lgnat-4.6
 
 clean:
 	$(RM) -rf $(BIN_DIR) $(OBJ_DIR)
