@@ -34,7 +34,7 @@ all: $(ADA_SUBS) $(C_OBJ_FILES) $(CPP_OBJ_FILES)
 		$(foreach subd, $(ADA_SUBS), $(subd)/*.ali) \
 		-o $(ADA_WRAP).adb
 	cd $(OBJ_DIR); \
-		gcc -c $(ADA_WRAP).adb
+		gcc-4.6 -c $(ADA_WRAP).adb
 	cd $(OBJ_DIR); \
 		ar cr $(ADA_WRAP).a $(ADA_WRAP).o \
 		$(foreach subd, $(ADA_SUBS), $(subd)/*.o)
