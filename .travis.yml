@@ -5,9 +5,6 @@ before_install:
 
 jobs:
   include:
-    - stage: dummy
-      script: g++ --print-libgcc-file-name && dpkg-query --listfiles libgnat-4.6
-
 #    - stage: gnu-make
 #      script: cd $TRAVIS_BUILD_DIR/gnu-make-hello && make && ./hello
 #    - stage: gnatmake
@@ -22,3 +19,5 @@ jobs:
 #      script: cd $TRAVIS_BUILD_DIR/cpp-main-ada-depend && make && ./main
 #    - stage: ada-main-big
 #      script: cd $TRAVIS_BUILD_DIR/ada-main-big && make && ./bin/main
+    - stage: cpp-main-big
+      script: cd $TRAVIS_BUILD_DIR/cpp-main-big && make && ./bin/main
