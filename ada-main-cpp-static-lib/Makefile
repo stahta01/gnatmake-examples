@@ -3,8 +3,8 @@ all:
 	mkdir -p ./lib
 	g++ -c i_am_cpp.cpp
 	g++ -c i_am_adaInterface.cpp
-	ar r ./lib/cppStatic.a *.o
-	gnatmake -o main -Pmain_app.gpr
+	ar r ./lib/libcppStatic.a *.o
+	gnatmake -Pmain_app.gpr
 #	gnatmake main -largs i_am_cpp.o i_am_adaInterface.o --LINK=g++
 
 .PHONY: clean
