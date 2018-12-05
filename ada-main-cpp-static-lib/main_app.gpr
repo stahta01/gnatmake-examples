@@ -1,7 +1,0 @@
-with "external_cpp.gpr";
-
-project Main_App is
-  for Source_Dirs use ("./ada");
-  for Main use ("main.adb");
-end Main_App;
-

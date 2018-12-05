@@ -4,7 +4,9 @@ all:
 	g++ -c i_am_cpp.cpp
 	g++ -c i_am_adaInterface.cpp
 	ar r ./lib/libcppStatic.a *.o
-	gnatmake -Pmain_app.gpr --GNATLINK=g++
+	gnatmake -c ada/main.adb
+	gnatbind -E main.ali
+	gnatlink -o main main.ali -L./lib -lcppStatic --LINK=g++
 #	gnatmake main -largs i_am_cpp.o i_am_adaInterface.o --LINK=g++
 
 .PHONY: clean
