@@ -1,4 +1,4 @@
-with "external_cpp.gpr";
+with "External_Cpp";
 
 project Main_App is
   for Main use ("main");
