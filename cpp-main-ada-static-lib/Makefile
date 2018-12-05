@@ -5,5 +5,5 @@ all:
 	gnatmake adaStatic.adb
 	ar cr libadaStatic.a adaStatic.o i_am_ada.o
 	ls -la
-	g++ main.o -o main -ladaStatic -lgnat
+	g++ main.o -o main -L. -ladaStatic -lgnat
 
