@@ -11,12 +11,14 @@ jobs:
 #      script: cd $TRAVIS_BUILD_DIR/ada-main-c-depend && make && ./main
 #    - stage: ada-main-cpp-depend
 #      script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-depend && make && ./main
-    - stage: ada-main-cpp-static-lib
-      script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-static-lib && make && ./main
+#    - stage: ada-main-cpp-static-lib
+#      script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-static-lib && make && ./main
 #    - stage: c-main-ada-depend
 #      script: cd $TRAVIS_BUILD_DIR/c-main-ada-depend && make && ./main
 #    - stage: cpp-main-ada-depend
 #      script: cd $TRAVIS_BUILD_DIR/cpp-main-ada-depend && make && ./main
+    - stage: cpp-main-ada-static-lib
+      script: cd $TRAVIS_BUILD_DIR/cpp-main-ada-static-lib && make && ./main
 #    - stage: cpp-main-big
 #      script: cd $TRAVIS_BUILD_DIR/cpp-main-big && make && ./bin/main
 #    - stage: gnatmake
