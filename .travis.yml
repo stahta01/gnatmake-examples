@@ -6,7 +6,7 @@ before_install:
 jobs:
   include:
     - stage: ada-main-cpp-static-lib
-      script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-static-lib && make && ls -la
+      script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-static-lib && make && ls -la && ./main
 #    - stage: gnu-make
 #      script: cd $TRAVIS_BUILD_DIR/gnu-make-hello && make && ./hello
 #    - stage: gnatmake
