@@ -1,0 +1,8 @@
+project Main_App is
+  for Main use ("main");
+
+  package Linker is
+    for Default_Switches ("Ada") use ("-L./lib", "-lcppStatic");
+  end Linker;
+end Main_App;
+

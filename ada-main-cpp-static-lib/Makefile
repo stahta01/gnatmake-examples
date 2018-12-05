@@ -1,7 +1,13 @@
-CPP_TOP := cpp
-
+.PHONY: all
 all:
-	g++ -c $(CPP_TOP)/i_am_cpp.cpp
-	g++ -c $(CPP_TOP)/i_am_adaInterface.cpp
-	ar r cppStatic.a *.o
+	mkdir -p ./lib
+	g++ -c i_am_cpp.cpp
+	g++ -c i_am_adaInterface.cpp
+	ar r ./lib/cppStatic.a *.o
+	gnatmake main_app.gpr
 #	gnatmake main -largs i_am_cpp.o i_am_adaInterface.o --LINK=g++
+
+.PHONY: clean
+clean:
+	rm -rf *.o lib
+
