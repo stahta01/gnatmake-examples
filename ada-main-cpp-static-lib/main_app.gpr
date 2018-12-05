@@ -1,6 +1,6 @@
 with "External_Cpp";
 
 project Main_App is
-  for Main use ("main");
+  for Source_Dirs use ("./ada");
 end Main_App;
 
