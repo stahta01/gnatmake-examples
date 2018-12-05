@@ -1,4 +1,4 @@
-with "External_Cpp";
+with "external_cpp.gpr";
 
 project Main_App is
   for Source_Dirs use ("./ada");
