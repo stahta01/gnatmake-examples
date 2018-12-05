@@ -7,10 +7,10 @@ extern "C" void ada_proc();
 
 int main()
 {
-  std::cout << "Starting C++ main." << std::endl;
   adaStaticinit();
+  std::cout << "Starting C++ main." << std::endl;
   ada_proc();
-  adaStaticfinal();
   std::cout << "Ending C++ main." << std::endl;
+  adaStaticfinal();
   return EXIT_SUCCESS;
 }
