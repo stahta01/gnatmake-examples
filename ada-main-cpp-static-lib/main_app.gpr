@@ -3,9 +3,5 @@ with "external_cpp.gpr";
 project Main_App is
   for Source_Dirs use ("./ada");
   for Main use ("main.adb");
-
-  package Linker is
-    for Driver use "g++";
-  end Linker;
 end Main_App;
 
