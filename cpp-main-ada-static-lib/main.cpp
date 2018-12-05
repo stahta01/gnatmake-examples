@@ -1,16 +1,16 @@
 #include <cstdlib>
 #include <iostream>
 
-extern "C" void elabinit();
-extern "C" void elabfinal();
+extern "C" void adaStaticinit();
+extern "C" void adaStaticfinal();
 extern "C" void ada_proc();
 
 int main()
 {
   std::cout << "Starting C++ main." << std::endl;
-  elabinit();
+  adaStaticinit();
   ada_proc();
-  elabfinal();
+  adaStaticfinal();
   std::cout << "Ending C++ main." << std::endl;
   return EXIT_SUCCESS;
 }
