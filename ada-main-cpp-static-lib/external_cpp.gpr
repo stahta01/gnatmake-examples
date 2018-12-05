@@ -1,0 +1,7 @@
+project External_Cpp is
+  for Externally_Built use "true";
+  for Library_Dir use "lib";
+  for Library_Name use "cppStatic";
+  for Library_Kind use "static";
+end External_Cpp;
+
