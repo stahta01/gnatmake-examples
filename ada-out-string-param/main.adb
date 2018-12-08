@@ -1,14 +1,17 @@
 with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Strings.Unbounded;
 
 procedure Main is
-  procedure I_Return_String(S : out String) is
+  package SU renames Ada.Strings.Unbounded;
+
+  procedure I_Return_String(Sun : out SU.Unbounded_String) is
   begin
-    S := "Hellew, I am an Ada string.";
+    Sun := SU.To_Unbounded_String("Hellew, I am an Ada string.");
   end I_Return_String;
 
-  Str : String;
+  SUnb : SU.Unbounded_String;
 begin
-  I_Return_String(Str);
-  Put_Line("Output string is here ==>" & Str & "<==");
+  I_Return_String(SUnb);
+  Put_Line("Output string is here ==>" & SU.To_String(SUnb) & "<==");
 end Main;
 
