@@ -47,6 +47,8 @@ begin
       case Contents is
         when Water =>
           Ounces : Positive;
+        when None =>
+          null;
       end case;
     end record;
     GG : Glass(None);
