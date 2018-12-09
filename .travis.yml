@@ -6,7 +6,7 @@ before_install:
 jobs:
   include:
     - stage: ada-exceptions
-      script: cd $TRAVIS_BUILD_DIR/ada-exceptions && make && ./bin/main
+      script: cd $TRAVIS_BUILD_DIR/ada-exceptions && make && ./main
 #    - stage: ada-main-big
 #      script: cd $TRAVIS_BUILD_DIR/ada-main-big && make && ./bin/main
 #    - stage: ada-main-c-depend
