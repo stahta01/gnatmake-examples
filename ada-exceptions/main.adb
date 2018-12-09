@@ -6,10 +6,11 @@ begin
 
   declare
     PP : Positive;
-    Now : Ada.Calendar.Time := Ada.Calendar.Clock;
+    Now : Ada.Calendar.Time;
   begin
-    -- Year will obviously be bigger than 3
-    PP := 3 - Positive(Ada.Calendar.Year(Now));
+    Now := Ada.Calendar.Clock;
+    -- Year will obviously be bigger than 1920
+    PP := 1920 - Positive(Ada.Calendar.Year(Now));
   exception
     when Constraint_Error =>
       Put_Line("Assigning a negative to a Positive causes Constraint_Error");
