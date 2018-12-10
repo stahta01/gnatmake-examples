@@ -58,9 +58,11 @@ begin
     --    not exist for GG's "None" discriminant value
     Put_Line(Positive'Image(GG.Ounces));
   exception
-    when Constraint_Error =>
+    when Storage_Error =>
+      -- supposed to be a CONSTRAINT_ERROR per LRM, here:
+      --    http://archive.adaic.com/standards/83lrm/html/lrm-11-01.html
       Put_Line("HANDLED: violate variant record component existance gives"
-               & " Constraint_Error");
+               & " Storage_Error");
   end;
 
 end Main;
