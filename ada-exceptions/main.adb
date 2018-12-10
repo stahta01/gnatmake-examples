@@ -26,21 +26,6 @@ begin
   end;
 
   declare
-    type Buffer(Size : Positive := 4) is
-      record
-        Value : String(1..Size);
-      end record;
---    BB : Buffer;  -- accept default Size
-  begin  -- TBD: intentionally violate BB's discriminant constraint
---    BB.Value(3) := 'Y';
-    null;
-  exception
-    when Constraint_Error =>
-      Put_Line("HANDLED: violate discriminant constraint gives"
-               & " Constraint_Error");
-  end;
-
-  declare
     type Liquid is (None, Water);
     type Glass (Contents : Liquid) is
       record
@@ -54,7 +39,8 @@ begin
     end record;
     GG : Glass(None);
   begin
-    GG.Ounces := 5;
+    GG.Ounces := 5; -- intentionally access variant record component that
+                    --    doesn't exist for GG
   exception
     when Constraint_Error =>
       Put_Line("HANDLED: violate variant record component existance gives"

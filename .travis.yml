@@ -7,26 +7,26 @@ jobs:
   include:
     - stage: ada-exceptions
       script: cd $TRAVIS_BUILD_DIR/ada-exceptions && make && ./main
-#    - stage: ada-main-big
-#      script: cd $TRAVIS_BUILD_DIR/ada-main-big && make && ./bin/main
-#    - stage: ada-main-c-depend
-#      script: cd $TRAVIS_BUILD_DIR/ada-main-c-depend && make && ./main
-#    - stage: ada-main-cpp-depend
-#      script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-depend && make && ./main
-#    - stage: ada-main-cpp-static-lib
-#      script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-static-lib && make && ./main
-#    - stage: ada-out-string-param
-#      script: cd $TRAVIS_BUILD_DIR/ada-out-string-param && make && ./main
-#    - stage: c-main-ada-depend
-#      script: cd $TRAVIS_BUILD_DIR/c-main-ada-depend && make && ./main
-#    - stage: cpp-main-ada-depend
-#      script: cd $TRAVIS_BUILD_DIR/cpp-main-ada-depend && make && ./main
-#    - stage: cpp-main-ada-static-lib
-#      script: cd $TRAVIS_BUILD_DIR/cpp-main-ada-static-lib && make && ./main
-#    - stage: cpp-main-big
-#      script: cd $TRAVIS_BUILD_DIR/cpp-main-big && make && ./bin/main
-#    - stage: gnatmake
-#      script: cd $TRAVIS_BUILD_DIR/gnatmake-hello && make && ./hello
-#    - stage: gnu-make
-#      script: cd $TRAVIS_BUILD_DIR/gnu-make-hello && make && ./hello
+    - stage: ada-main-big
+      script: cd $TRAVIS_BUILD_DIR/ada-main-big && make && ./bin/main
+    - stage: ada-main-c-depend
+      script: cd $TRAVIS_BUILD_DIR/ada-main-c-depend && make && ./main
+    - stage: ada-main-cpp-depend
+      script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-depend && make && ./main
+    - stage: ada-main-cpp-static-lib
+      script: cd $TRAVIS_BUILD_DIR/ada-main-cpp-static-lib && make && ./main
+    - stage: ada-out-string-param
+      script: cd $TRAVIS_BUILD_DIR/ada-out-string-param && make && ./main
+    - stage: c-main-ada-depend
+      script: cd $TRAVIS_BUILD_DIR/c-main-ada-depend && make && ./main
+    - stage: cpp-main-ada-depend
+      script: cd $TRAVIS_BUILD_DIR/cpp-main-ada-depend && make && ./main
+    - stage: cpp-main-ada-static-lib
+      script: cd $TRAVIS_BUILD_DIR/cpp-main-ada-static-lib && make && ./main
+    - stage: cpp-main-big
+      script: cd $TRAVIS_BUILD_DIR/cpp-main-big && make && ./bin/main
+    - stage: gnatmake
+      script: cd $TRAVIS_BUILD_DIR/gnatmake-hello && make && ./hello
+    - stage: gnu-make
+      script: cd $TRAVIS_BUILD_DIR/gnu-make-hello && make && ./hello
 
