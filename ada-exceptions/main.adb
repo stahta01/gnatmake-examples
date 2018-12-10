@@ -53,8 +53,10 @@ begin
     end record;
     GG : Glass(None);
   begin
-    GG.Ounces := 5;  -- intentionally try to use a record component that does
-                     --    not exist for GG's "None" discriminant value
+    GG.Weight := 5;
+    -- intentionally try to use a record component that does
+    --    not exist for GG's "None" discriminant value
+    Put_Line(Positive'Image(GG.Ounces));
   exception
     when Constraint_Error =>
       Put_Line("HANDLED: violate variant record component existance gives"
