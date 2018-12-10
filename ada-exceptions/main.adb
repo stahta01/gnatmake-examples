@@ -31,8 +31,8 @@ begin
         Value : String(1..Size);
       end record;
     BB : Buffer;  -- accept default Size
-  begin
-    BB.Value(5) := 'Y';  -- intentionally violate BB's discriminant constraint
+  begin  -- TBD: intentionally violate BB's discriminant constraint
+    BB.Value(3) := 'Y';
   exception
     when Constraint_Error =>
       Put_Line("HANDLED: violate discriminant constraint gives"
@@ -58,11 +58,9 @@ begin
     --    not exist for GG's "None" discriminant value
     Put_Line(Positive'Image(GG.Ounces));
   exception
-    when Storage_Error =>
-      -- supposed to be a CONSTRAINT_ERROR per LRM, here:
-      --    http://archive.adaic.com/standards/83lrm/html/lrm-11-01.html
+    when Constraint_Error =>
       Put_Line("HANDLED: violate variant record component existance gives"
-               & " Storage_Error");
+               & " Constraint_Error");
   end;
 
 end Main;
