@@ -25,43 +25,43 @@ begin
       Put_Line("HANDLED: violate index constraint gives Constraint_Error");
   end;
 
-  declare
-    type Buffer(Size : Positive := 4) is
-      record
-        Value : String(1..Size);
-      end record;
-    BB : Buffer;  -- accept default Size
-  begin  -- TBD: intentionally violate BB's discriminant constraint
-    BB.Value(3) := 'Y';
-  exception
-    when Constraint_Error =>
-      Put_Line("HANDLED: violate discriminant constraint gives"
-               & " Constraint_Error");
-  end;
+--  declare
+--    type Buffer(Size : Positive := 4) is
+--      record
+--        Value : String(1..Size);
+--      end record;
+--    BB : Buffer;  -- accept default Size
+--  begin  -- TBD: intentionally violate BB's discriminant constraint
+--    BB.Value(3) := 'Y';
+--  exception
+--    when Constraint_Error =>
+--      Put_Line("HANDLED: violate discriminant constraint gives"
+--               & " Constraint_Error");
+--  end;
 
-  declare
-    type Liquid is (None, Water);
-    type Glass (Contents : Liquid) is
-      record
-        Weight : Positive;
-      case Contents is
-        when Water =>
-          Ounces : Positive;
-        when None =>
-          null;
-      end case;
-    end record;
-    GG : Glass(None);
-  begin
-    GG.Weight := 5;
-    -- intentionally try to use a record component that does
-    --    not exist for GG's "None" discriminant value
-    Put_Line(Positive'Image(GG.Ounces));
-  exception
-    when Constraint_Error =>
-      Put_Line("HANDLED: violate variant record component existance gives"
-               & " Constraint_Error");
-  end;
+--  declare
+--    type Liquid is (None, Water);
+--    type Glass (Contents : Liquid) is
+--      record
+--        Weight : Positive;
+--      case Contents is
+--        when Water =>
+--          Ounces : Positive;
+--        when None =>
+--          null;
+--      end case;
+--    end record;
+--    GG : Glass(None);
+--  begin
+--    GG.Weight := 5;
+--    -- intentionally try to use a record component that does
+--    --    not exist for GG's "None" discriminant value
+--    Put_Line(Positive'Image(GG.Ounces));
+--  exception
+--    when Constraint_Error =>
+--      Put_Line("HANDLED: violate variant record component existance gives"
+--               & " Constraint_Error");
+--  end;
 
 end Main;
 
