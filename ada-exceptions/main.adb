@@ -39,29 +39,29 @@ begin
 --               & " Constraint_Error");
 --  end;
 
---  declare
---    type Liquid is (None, Water);
---    type Glass (Contents : Liquid) is
---      record
---        Weight : Positive;
---      case Contents is
---        when Water =>
---          Ounces : Positive;
---        when None =>
---          null;
---      end case;
---    end record;
---    GG : Glass(None);
---  begin
---    GG.Weight := 5;
---    -- intentionally try to use a record component that does
---    --    not exist for GG's "None" discriminant value
+  declare
+    type Liquid is (None, Water);
+    type Glass (Contents : Liquid) is
+      record
+        Weight : Positive;
+      case Contents is
+        when Water =>
+          Ounces : Positive;
+        when None =>
+          null;
+      end case;
+    end record;
+    GG : Glass(None);
+  begin
+    -- intentionally try to use a record component that does
+    --    not exist for GG's "None" discriminant value
+    GG.Ounces := 5;
 --    Put_Line(Positive'Image(GG.Ounces));
---  exception
---    when Constraint_Error =>
---      Put_Line("HANDLED: violate variant record component existance gives"
---               & " Constraint_Error");
---  end;
+  exception
+    when Constraint_Error =>
+      Put_Line("HANDLED: violate variant record component existance gives"
+               & " Constraint_Error");
+  end;
 
 end Main;
 
