@@ -1,2 +1,4 @@
+GPRBUILD=gprbuild
+
 all:
-	gnatmake main.adb
+	$(GPRBUILD) main.adb
