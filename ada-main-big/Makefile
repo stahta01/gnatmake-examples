@@ -24,7 +24,7 @@ CPP_OBJ_FILES := $(patsubst $(SRC_DIR)/$(CPP_SUB)/%.cpp, \
 #    and OBJ & BIN directories logically organized
 all: $(ADA_SUBS) $(C_OBJ_FILES) $(CPP_OBJ_FILES)
 	cd $(TOP_DIR)/$(OBJ_DIR);                         \
-		gcc-4.6 -c $(TOP_DIR)/$(SRC_DIR)/main.adb \
+		gcc -c $(TOP_DIR)/$(SRC_DIR)/main.adb \
 		$(foreach subd, $(ADA_SUBS),              \
 		  -I$(TOP_DIR)/$(SRC_DIR)/$(subd))
 	cd $(TOP_DIR)/$(OBJ_DIR);                        \
